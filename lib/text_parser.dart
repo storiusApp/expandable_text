@@ -47,7 +47,7 @@ List<TextSegment> parseText(String? text) {
 
   // parse urls and words starting with @ (mention) or # (hashtag)
   RegExp exp = RegExp(
-    r'(?<keyword>(?:@|#)\w+)|(?<url>(?:https?:\/\/)?(?:(?:www\.)?[a-zA-Z\d]{2,}(\.[a-zA-Z\d]{2,})+|\d{1,3}(?:\.\d{1,3}){3})(?:\:\d{1,5})?([a-zA-Z\d_=!\.?#&%+/-]{2,})?)',
+    r'(?<keyword>(?:@|#)\w+)|(?<url>(?:https?:\/\/)?(?:(?:www\.)?[a-zA-Z\d]{2,}(\.[a-zA-Z\d]{2,})+|\d{1,3}(?:\.\d{1,3}){3})(?::\d{1,5})?([a-zA-Z\d_=!\.?#&%+/-]{2,})?)',
     unicode: true,
   );
   final matches = exp.allMatches(text);
